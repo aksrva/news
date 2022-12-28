@@ -1,0 +1,24 @@
+<section class="mt-4">
+    <div class="container">
+        <h2 class="heading">International</h2>
+        <div class="international-news">
+            {{#each international}}
+            <div class="news">
+                <div class="news_image">
+                    <img src="{{urlToImage}}" alt="">
+                </div>
+               <div class="news-title f-103rem">
+                        <a href="{{url}}" class="f-black">{{title}}</a>
+                    </div>
+                <div class="published_date">
+                    By <span class="author">{{author}}</span>
+                    -- <span class="date">{{publishedAt}}</span>
+                </div>
+                <div class="news-description">
+                    {{description}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

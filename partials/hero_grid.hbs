@@ -1,0 +1,21 @@
+<section class="mt-4">
+    <div class="container">
+        <div class="news_grid_boxes">
+            {{#each hero_grid}}
+                <div class="grid_box {{class}}">
+                <div class="news_text">
+                    <div class="news-title {{text_size}}">
+                        <a href="{{url}}">{{title}}</a>
+                    </div>
+                    <div class="news-published-date">
+                        {{publishedAt}}
+                    </div>
+                </div>
+                <div class="news-img">
+                    <img src="{{urlToImage}}" alt="">
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

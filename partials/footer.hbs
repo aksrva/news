@@ -1,0 +1,35 @@
+<footer class="mt-4">
+    <div class="container">
+        &copy; 2022 - Designed By <a href="https://lapmos.com">Akash Kumar</a>
+    </div>
+</footer>
+<a href="#">
+    <div class="go_to_top">
+    <i class="fa-solid fa-arrow-right"></i>
+</div>
+</a>
+<script>
+    let time = document.getElementById("times");
+    setInterval(()=> {
+        let date = new Date();
+        let h = date.getHours();
+        h = h < 10 ? "0" + h : h;
+        let m = date.getMinutes();
+        m = m < 10 ? "0" + m : m;
+        let s = date.getSeconds();
+        s = s < 10 ? "0" + s : s;
+        time.innerText = h + ":" + m + ":" + s;
+    }, 1000)
+
+    let x = 0;
+    let navigation = document.getElementById("navigation");
+        navigation.addEventListener("click", ()=> {
+    if(x == 0){
+            document.querySelector("nav").style.left = "2rem";
+        x = 1;
+    }else{
+            document.querySelector("nav").style.left = "-260px";
+        x =0;
+    }
+        })
+</script>

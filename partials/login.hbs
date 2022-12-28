@@ -1,0 +1,45 @@
+<section>
+    <div class="container">
+        <div class="login-form">
+            <div class="login-head">
+                Login to Your account
+            </div>
+            <div class="form">
+                <form action="/logged" method="post">
+                    <div class="input-group">
+                        <label for="username">Username or Email<span>*</span></label>
+                        <input type="text" id="username" name="username" placeholder="Username or Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password<span>*</span></label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="input-group d-flex algn-center">
+                        <input type="checkbox" name="rember" id="rember">
+                        <label for="rember">Remember me</label>
+                    </div>
+                    <div class="login-btn">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="forgot">
+                        <a href="#">Forgot Username/Password?</a>
+                    </div>
+                    <div class="social-login">
+                        <div class="facebook">
+                            <span><i class="fa-brands fa-facebook-f"></i>Login with facebook</span>
+                        </div>
+                        <div class="twitter">
+                            <span><i class="fa-brands fa-twitter"></i>Login with twitter</span>
+                        </div>
+                    </div>
+                </form>
+            {{#if show}}
+                <div class="notification">
+                    <p>{{err_success}}</p>
+                    <span class="progress"></span>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

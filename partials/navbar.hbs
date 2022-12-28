@@ -1,0 +1,48 @@
+<section class="box-shadow">
+    <div class="container navbar">
+        <div class="strip-top d-flex spc-btwn">
+            <div class="r-l-c">
+                {{#if logged}}
+                    <span class="link_color">{{username}}</span>
+                    <span><a class="link_color" href="/logout">Logout</a></span>
+                    {{else}}
+                    <span><a href="/registration" class="link_color">Registration</a></span>
+                    <span><a href="/login" class="link_color">Login</a></span>
+                {{/if}}
+            </div>
+            <div class="social-icons">
+                <span id="times">00:00:00</span>
+            </div>
+        </div>
+            <div class="d-flex spc-btwn algn-center">
+            <div class="logo">
+                <a href="/" class="logo">Newsify</a>
+            </div>
+             <form action="/search" id="big-search" method="post">
+                        <input type="text" placeholder="Search Here" name="search_query">
+                        <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+             </form>
+             <div class="navigation" id="navigation">
+                <i><i class="fa-solid fa-bars"></i></i>
+             </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/category/business" class="nav_link">business</a></li>
+                <li><a href="/category/entertainment" class="nav_link">entertainment</a></li>
+                <li><a href="/category/general" class="nav_link">general</a></li>
+                <li><a href="/category/health" class="nav_link">health</a></li>
+                <li><a href="/category/politics" class="nav_link">politics</a></li>
+                <li><a href="/category/science" class="nav_link">science</a></li>
+                <li><a href="/category/sports" class="nav_link">sports</a></li>
+                <li><a href="/category/technology" class="nav_link">technology</a></li>
+                <li>
+                      <form id="mobile-search" action="/search" method="post">
+                        <input type="text" placeholder="Search Here" name="search_query">
+                        <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+             </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>

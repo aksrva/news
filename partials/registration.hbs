@@ -1,0 +1,45 @@
+<section>
+    <div class="container">
+        <div class="login-form">
+            <div class="login-head">
+                Registration Now
+            </div>
+            <div class="form">
+                <form method="post" action="/register">
+                    <div class="input-group">
+                        <label for="username">Username or Email<span>*</span></label>
+                        <input type="text" id="username" name="username" placeholder="Username or Email" pattern="[a-z0-9A-Z.@_%+-]{2,}$">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password<span>*</span></label>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="input-group">
+                        <label for="re-password">Rewrite Password<span>*</span></label>
+                        <input type="password" name="re_password" id="re-password" placeholder="Rewrite Password">
+                    </div>
+                    <div class="login-btn">
+                        <button type="submit">Register Now</button>
+                    </div>
+                    <div class="forgot">
+                        <a href="/login">Have an account?</a>
+                    </div>
+                    <div class="social-login">
+                        <div class="facebook">
+                            <span><i class="fa-brands fa-facebook-f"></i>Login with facebook</span>
+                        </div>
+                        <div class="twitter">
+                            <span><i class="fa-brands fa-twitter"></i>Login with twitter</span>
+                        </div>
+                    </div>
+                </form>
+                {{#if show}}
+                <div class="notification">
+                    <p>{{err_success}}</p>
+                    <span class="progress"></span>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,143 @@
+<section class="mt-4">
+    <div class="container">
+        <h2 class="heading">{{posts}}</h2>
+        <div class="list-view-links">
+<div class="list-link">
+                <h2>Category</h2>
+                <a href="/category/business">business</a>
+                <a href="/category/entertainment">entertainment</a>
+                <a href="/category/general">general</a>
+                <a href="/category/health">health</a>
+                <a href="/category/politics">politics</a>
+                <a href="/category/science">science</a>
+                <a href="/category/sports">sports</a>
+                <a href="/category/technology">technology</a>
+
+                <h2>sources</h2>
+                <a href="/source/abc-news">ABC News</a>
+                <a href="/source/bbc-news">BBC News</a>
+                <a href="/source/bbc-sport">BBC Sport</a>
+                <a href="/source/business-insider">Business Insider</a>
+                <a href="/source/cbc-news">CBC News</a>
+                <a href="/source/cnn">CNN</a>
+                <a href="/source/cbs-news">CBS News</a>
+                <a href="/source/entertainment-weekly">Entertainment Weekly</a>
+                <a href="/source/espn">ESPN</a>
+                <a href="/source/espn-cric-info">ESPN Cric Info</a>
+                <a href="/source/financial-post">Financial Post</a>
+                <a href="/source/focus">Focus</a>
+                <a href="/source/football-italia">Football Italia</a>
+                <a href="/source/fortune">Fortune</a>
+                <a href="/source/fox-news">Fox News</a>
+                <a href="/source/fox-sports">Fox Sports</a>
+                <a href="/source/globo">Globo</a>
+                <a href="/source/google-news">Google News</a>
+                <a href="/source/hacker-news">Hacker News</a>
+                <a href="/source/ign">IGN</a>
+                <a href="/source/infobae">Infobae</a>
+                <a href="/source/info-money">InfoMoney</a>
+                <a href="/source/msnbc">MSNBC</a>
+                <a href="/source/mtv-news">MTV News</a>
+                <a href="/source/national-geographic">National Geographic</a>
+                <a href="/source/nbc-news">NBC News</a>
+                <a href="/source/new-scientist">New Scientist</a>
+                <a href="/source/newsweek">Newsweek</a>
+                <a href="/source/new-york-magazine">New York Magazine</a>
+                <a href="/source/nfl-news">NFL News</a>
+                <a href="/source/nhl-news">NHL News</a>
+                <a href="/source/nrk">NRK</a>
+                <a href="/source/rbc">RBC</a>
+                <a href="/source/techcrunch">TechCrunch</a>
+                <a href="/source/the-hill">The Hill</a>
+                <a href="/source/the-hindu">The Hindu</a>
+                <a href="/source/the-times-of-india">The Times of India</a>
+                <a href="/source/the-verge">The Verge</a>
+                <a href="/source/the-washington-times">The Washington Times</a>
+                <a href="/source/time">Time</a>
+
+                <h2>Country</h2>
+                <a href="/country/ar">argentina</a>
+                <a href="/country/au">Australia</a>
+                <a href="/country/at">Austria</a>
+                <a href="/country/be">Belguim</a>
+                <a href="/country/br">Brazil</a>
+                <a href="/country/bg">Bulgaria</a>
+                <a href="/country/ca">Canada</a>
+                <a href="/country/cn">China</a>
+                <a href="/country/co">Colombia</a>
+                <a href="/country/cu">Cuba</a>
+                <a href="/country/cz">Czech republic</a>
+                <a href="/country/eg">Egypt</a>
+                <a href="/country/fr">france</a>
+                <a href="/country/de">germary</a>
+                <a href="/country/gr">greece</a>
+                <a href="/country/hk">Hong Kong</a>
+                <a href="/country/hu">Hungary</a>
+                <a href="/country/in">India</a>
+                <a href="/country/id">indonesia</a>
+                <a href="/country/ie">ireland</a>
+                <a href="/country/il">israel</a>
+                <a href="/country/it">italy</a>
+                <a href="/country/jp">japan</a>
+                <a href="/country/lv">latvia</a>
+                <a href="/country/lt">lithuania</a>
+                <a href="/country/my">malaysia</a>
+                <a href="/country/mx">mexico</a>
+                <a href="/country/ma">morocco</a>
+                <a href="/country/nl">netherlands</a>
+                <a href="/country/nz">New Zealand</a>
+                <a href="/country/ng">Nigeria</a>
+                <a href="/country/no">Norway</a>
+                <a href="/country/ph">Philippines</a>
+                <a href="/country/pl">poland</a>       
+                <a href="/country/pt">portugal</a>       
+                <a href="/country/ro">romania</a>       
+                <a href="/country/ru">russia</a>       
+                <a href="/country/sa">Saudi Arabia</a>       
+                <a href="/country/rs">Serbia</a>       
+                <a href="/country/sg">Singapore</a>       
+                <a href="/country/sk">Slovakia</a>       
+                <a href="/country/si">Slovenia</a>       
+                <a href="/country/za">South Africa</a>       
+                <a href="/country/kr">South Korea</a>       
+                <a href="/country/se">Sweden</a>      
+                <a href="/country/ch">Switzerland</a>
+                <a href="/country/tw">Taiwan</a>
+                <a href="/country/th">Thailand</a>
+                <a href="/country/tr">Turkey</a>
+                <a href="/country/ae">uae</a>
+                <a href="/country/ua">ukraine</a>
+                <a href="/country/gb">united kingdom</a>
+                <a href="/country/us">united states</a>
+                <a href="/country/ve">Venuzuela</a>
+            </div>
+            {{#each latest_news}}
+            
+            <div class="list-view col-2">
+                <div class="list-item d-flex">
+                <div class="list-view-image">
+                    <img src="{{urlToImage}}" alt="">
+                </div>
+              <div class="news-text ml-1">
+                    <div class="news-title f-103rem">
+                        <a href="{{url}}" class="f-black">{{title}}</a>
+                    </div>
+                <div class="published_date">
+                    By <span class="author">{{author}}</span>
+                    -- <span class="date">{{publishedAt}}</span>
+                </div>
+                <div class="news-description">
+                    {{description}}
+                </div>
+                <div class="read-more">
+                    <a href="{{url}}">Read More</a>
+                </div>
+              </div>
+            </div>
+            </div>
+            {{/each}}
+
+        </div>
+        
+    </div>
+</section>
