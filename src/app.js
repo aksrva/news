@@ -29,6 +29,7 @@ app.use(session({
     cookie: {maxAge: 86400000},
     resave: false
 }))
+
 app.set("view engine", "hbs");
 hbs.registerPartials(path.join(__dirname, "../partials"));
 
