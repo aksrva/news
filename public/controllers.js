@@ -43,7 +43,7 @@ rout.get('/',async(req,res)=>{
     try {
         var url = 'http://newsapi.org/v2/top-headlines?' +
         'country=in&' +
-        'apiKey=123c52639f17444db03dc3dbd2a13000';
+        'apiKey=f4242a90704d4894b73ec0dd52c7ea19';
         let news_get =await axios.get(url);
         // console.log(news_get.data.articles);
         for(let i = 0; i < 20; i++){
