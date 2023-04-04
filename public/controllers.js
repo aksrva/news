@@ -57,7 +57,7 @@ rout.get('/',async(req,res)=>{
                 latest_news.push(news_get.data.articles[i]);
             }
         }
-        news_get = await axios.get("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=123c52639f17444db03dc3dbd2a13000")
+        news_get = await axios.get("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f4242a90704d4894b73ec0dd52c7ea19")
         for(let i = 0; i < 6; i++){
             international_news.push(news_get.data.articles[i]);
         }
@@ -75,7 +75,7 @@ rout.get('/',async(req,res)=>{
 rout.post("/search", async(req, res) =>{
     let search = req.body.search_query;
     try{
-        let url = `http://newsapi.org/v2/everything?q=${search}&apiKey=123c52639f17444db03dc3dbd2a13000`;
+        let url = `http://newsapi.org/v2/everything?q=${search}&apiKey=f4242a90704d4894b73ec0dd52c7ea19`;
         const news_get = await axios.get(url);
         res.render("query", {latest_news: news_get.data.articles, posts: "Search : " + search});
     }catch(error){
@@ -88,7 +88,7 @@ rout.post("/search", async(req, res) =>{
 rout.get("/category/:category", async(req, res) => {
     let category = req.params.category;
     try {
-        let url = `http://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=123c52639f17444db03dc3dbd2a13000`;
+        let url = `http://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=f4242a90704d4894b73ec0dd52c7ea19`;
         let news_get = await axios.get(url);
         res.render("query", {latest_news: news_get.data.articles, posts: "Category : " + category});
     } catch (error) {
@@ -101,7 +101,7 @@ rout.get("/category/:category", async(req, res) => {
 rout.get("/source/:source", async(req, res) => {
     let source = req.params.source;
     try {
-        let url = `http://newsapi.org/v2/top-headlines?sources=${source}&apiKey=123c52639f17444db03dc3dbd2a13000`;
+        let url = `http://newsapi.org/v2/top-headlines?sources=${source}&apiKey=f4242a90704d4894b73ec0dd52c7ea19`;
         let news_get = await axios.get(url);
         res.render("query", {latest_news: news_get.data.articles, posts: "Source : " + source});
     } catch (error) {
@@ -114,7 +114,7 @@ rout.get("/source/:source", async(req, res) => {
 rout.get("/country/:country", async(req, res) => {
     let country = req.params.country;
     try {
-        let url = `http://newsapi.org/v2/top-headlines?country=${country}&apiKey=123c52639f17444db03dc3dbd2a13000`;
+        let url = `http://newsapi.org/v2/top-headlines?country=${country}&apiKey=f4242a90704d4894b73ec0dd52c7ea19`;
         let news_get = await axios.get(url);
         res.render("query", {latest_news: news_get.data.articles, posts: "Country : " + country});
     } catch (error) {
